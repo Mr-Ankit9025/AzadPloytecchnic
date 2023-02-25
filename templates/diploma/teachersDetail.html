@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>About Teacher</title>
+  
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all" />
+  <script src="{% static 'js/bootstrap.js' %}" type="text/javascript" charset="utf-8"></script>
+  <style>
+    .br{
+     
+      border-top:  5px double aqua;
+      border-bottom:  5px double aqua;
+    }
+    .image{
+      height: 200px;
+      width: 200px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <p class="text-center mt-4 fs-2 fw-bold">
+
+    <b class="br">
+      About <b class="text-info">Sir/Mam</b>
+    </b>
+  </p>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8 mb-5">
+      
+    <div class="row">
+     {% for t in tdetail %}
+      <div class="col-sm-12">
+      
+      
+      <div class="card">
+       <img src="/{{t.teacherPhoto}}" alt="" class="image">
+        <div class="card-body">
+          <h5 class="card-title mb-3" style="text-align: center; ">({{t.teacherName}})</h5>
+          <p>{{t.aboutTeacher}}</p>
+          
+        </div>
+      </div>  
+        
+      </div>
+      
+      {% endfor %}
+      </div>
+      </div>
+  <div class="col-sm-2"></div>
+  
+</div>
+</body>
+</html>

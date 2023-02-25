@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content%}
+
+
+<p class="fs-1 fw-bold text-center ">Our <b class="text-info">Placement <i class="fa-solid fa-handshake"></i></b></p>
+
+
+<div class="row">
+<div class="col-sm-5 mx-auto">
+<div class="input-group">
+  <input type="text" class="form-control">
+  <span class="input-group-text bg-info">
+    <input type="submit" class="btn btn-sm btn-info" value="search">
+  </span>
+</div>
+  
+</div>
+  
+</div>
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+  <div class="row mb-4">
+    {% for x in place %}
+    <div class="col-sm-5 mx-auto mt-5">
+      
+  <div class="card">
+    <img src="/{{x.stupic}}" class="img-cart-top mx-auto" height="100px" width="100px" >
+    <div class="card-body">
+      <h5 class="card-title">{{x.cname}}</h5>
+      <!-- <img src="/{{x.cpic}}" style="max-height:60px;" class="img-thumbnail float-end"> -->
+      <br>
+      <b class="">Name :</b>{{x.name}}<br>
+      <b class=""> Branch :</b>{{x.branch}} <br>
+      <b class="">Session :</b>{{x.pyear}}<br>
+      <b class="">City :</b>{{x.pcity}}<br>
+      <b class="">Course :</b>{{x.course}}<br>
+      <b class="">Designation :</b>
+    {{x.designation}} <br>
+    </div>
+  </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+</div>
+<div class="col-sm-1"></div>
+  
+</div>
+{%endblock%}

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="eng">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Home page</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all" />
+  <script src="{% static 'js/bootstrap.js' %}" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css" media="all">
+    .mh{
+    
+      
+    width: 100%;
+    padding-right: 0px;
+    margin: 0px;
+    }
+    .image{
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+    .services{
+      border-radius: 12px;
+    }
+    .shade{
+      background: #6f6f6fdc;
+      background-size: cover;
+    }
+    .anchor{
+      text-decoration: none;
+      color: black;
+    }
+    .brdr{
+      border-top: 5px double aqua;
+      border-bottom: 5px double aqua;
+    }
+    .diploma{
+      background-image: url("{% static 'images/img1.jpeg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 200px;
+      border-radius: 20px;
+    }
+    .anm{
+      min-height: 100px;
+    }
+    #blur{
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+    }
+    .txt{
+      text-align: center;
+      padding: 50px;
+      box-sizing: border-box;
+      border: 2px groove green;
+      box-sizing: border-box;
+    }
+  </style>
+
+</head>
+<body>
+  
+  
+  <!-- our management -->
+   
+   <div class="row mt-3">
+     {% for x in tdetail %}
+      <div class="col-sm-4">
+        <p class="text-center">
+          <img src="{{x.teacherPhoto}}" class="image" alt="" /></p>
+         <p class="text-center fw-bold fs-4">
+           {{x.teacherPosition}}
+         <br />
+         <b class="text-center fw-bold fs-5">({{x.teacherName}})</b></p>
+      
+      <p class="text-center"> <button class="btn btn-outline-info" type="submit"><a href="/student/teachersDetail?msg={{x.id}}" class="anchor">Know More</a></button></p>
+      </div>
+      {% endfor %}
+      
+    </div>
+    
+    
+    
+  <!-- our services -->
+  <p class="text-center text-info fs-1 mt-3"><b class="brdr">SERVICES</b></p>
+  
+   <div class="services row container">
+     <div class="col-sm-12">
+      <div class="col-sm-6 px-4">
+        <div class="diploma">
+        <div id="blur">
+          <h1 class="text-center mt-2 p-4"><b class="brdr">Engineeering</b></h1>
+          <p class="text-center text-dark fs-3 txt">
+            Engineering is the use of scientific principles to design and build machines, structures, and other items, including bridges, tunnels, roads, vehicles, and buildings
+          </p>
+          <p class="text-center p-2">
+
+            <button class="btn btn-outline-info"> <a href="/student/index" class="anchor">Click Here</a></button>
+          </p>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-6 px-4">
+        <div class="anm">
+          <div class="blur">
+
+
+
+            -
+          </div>
+        </div>
+      </div>
+     </div>
+   </div>
+   <div class="row section2">
+     
+   </div>
+</body>
+</html>

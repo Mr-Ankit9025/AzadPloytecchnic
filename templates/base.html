@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all" />
+  <link rel="stylesheet" href="{% static 'css/all.css' %}" type="text/css" media="all" />
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}" ></script>
+  <script src="{% static 'js/bootstrap.js' %}" ></script>
+
+  <style>
+  .bor{
+    margin-top: 20px;
+    border-top: 5px double aqua;
+    border-bottom: 5px double aqua;
+    box-sizing: border-box;
+    }
+    .bor1{
+      border-bottom: 3px solid aqua;
+      padding-bottom: 4px;
+      box-sizing: border-box;
+    }
+    .footer{
+      background-image: url("{% static 'images/img1.jpeg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+    }
+    #blur{
+      padding: 10px;
+      box-sizing: border-box;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.6);
+    }
+    .link a{
+      text-decoration: none;
+      font-size: 20px;
+      color:white;
+    }
+   
+   
+  </style>
+</head>
+<body>
+  <div class="row bg-light">
+    <div class="col-sm-3">
+      <p class="text-center fs-2 mt-2 fw-bold">A<b class="text-info fs-4">ZAD</b> P<b class="text-info fs-4">OLYTECHNIC</b></p>
+    </div>
+    <div class="col-sm-9 p-1">
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav fw-bold text-center">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/student/index"><i class="fa-solid fa-house-user"></i> Home</a>
+       </li>
+      <li class="nav-item">
+         <a class="nav-link" href="/student/aboutus"><i class="fa-solid fa-book-open-reader"></i> About us</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="/student/contact"><i class="fa-solid fa-address-book"></i> Contact us</a>
+       </li>
+         <li class="nav-item">
+         <a class="nav-link" href="/student/video"><i class="fa-solid fa-address-book"></i> Vedio</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/student/courses"><i class="fa-solid fa-book"></i> Courses</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="/student/placement"><i class="fa-solid fa-handshake"></i> Our Placement</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/student/register "><i class="fa-solid fa-user-plus"></i> Student Register</a>
+       </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/student/gallery"><i class="fa-solid fa-images"></i> Gallery</a>
+        </li>
+          <li class="nav-item">
+        <a class="nav-link" href="/student/faculty"> <i class="fa-solid fa-sitemap"></i>Faculty</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="/student/infra"> <i class="fa-solid fa-sitemap"></i> Infrastructure</a>
+   </li>
+ </ul>
+    </div>
+  </div>
+</nav>
+    </div>
+  </div>
+  <div class="row bg-dark text-light text-center fw-bold mt-3">
+    <div class="col-sm-4">
+      <i class="fa-solid fa-envelope"></i> azadpoly1@gmail.com
+    </div>
+    <div class="col-sm-4">
+      Azad Polytechnic (4427)
+    </div>
+    <div class="col-sm-4">
+      <i class="fa-solid fa-phone"></i> +91 9450994420
+    </div>
+  </div>
+
+
+  <!-- other content goes here... -->
+  <div class="row">
+   {% block content %}
+
+
+      {% endblock %}
+  </div>
+<!-- end for other content -->
+
+
+<div class="row">
+  <p class="fs-1 text-center fw-bold ">FI<u style="color: red;">ND <b class="text-info "> U</u>S </b> <i class="fa-brands fa-searchengin text-info"></i></p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.057840479462!2d83.12655800000002!3d25.768653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991b70fffffffff%3A0x72bc8cf8321df647!2sAzad%20Polytechnic%20Bharthipur!5e0!3m2!1sen!2sin!4v1664566178704!5m2!1sen!2sin"  class="w-100 m-3" height="300px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+
+  <div class="footer">
+    <div id="blur" class="row">
+    <div class="col-sm-4">
+      <img src="{% static '/images/aicte.png' %}"  height="150px" width="150px"  >
+
+      <img src="{% static '/images/bteup.webp' %}" style=" border-radius:50%; float: right;" height="150px" width="150px" >
+      <br>
+      <img src="{% static '/images/playstore.png' %}"  height="200px" class="mb-3 mt-4 w-100" >
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-dark text-center fw-bold fs-1"><b class="bor">Important Links</b></p>
+      <p class="text-center fw-bold  link"><a href="#">AICTE Website</a></p>
+      <p class="text-center fw-bold  link"><a href="#">JEECUP Website</a></p>
+      <p class="text-center fw-bold  link"><a href="#">District Officail Website</a></p>
+      <p class="text-center fw-bold  link"><a href="#">Scholarship UP</a></p>
+      <p class="text-center fw-bold  link"><a href="#">Indian Gov Web Directory</a></p>
+      <p class="text-center fw-bold  link"><a href="#">Employment News</a></p>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-light fs-3"><b class="bor1">Stay Connected</b> With <b class="text-info">Us</b></p>
+           
+      <p class="text-light fs-5">
+       <i class="fa-brands fa-facebook-f text-primary"></i> Facebook <br />
+       <i class="fa-brands fa-twitter text-info"></i> Twitter <br />
+        <i class="fa-brands fa-whatsapp text-success"></i> Whatsapp <br />
+        <i class="fa-brands fa-linkedin-in text-primary"></i> Linkdin <br />
+        <i class="fa-brands fa-instagram text-danger"></i> Instagram <br/>
+        <p class="text-dark text-center fw-bold fs-1"><b class="bor">Contact</b></p>
+        <i class="fa-solid fa-phone text-info"></i><b class="text-light"> 9415370426, 9936380916, 9450994420</b>
+        <br>
+        <i class="fa-solid fa-envelope text-info"></i><b class="text-light"> azadpoly1@gmail.com</b> <br>
+        <i class="fa-solid fa-location text-info"></i><b class="text-light"> Azad Polytechnic Bharthipur, Palhana, Azamgarh, U.P., India-276123</b>
+
+      </p>
+    </div>
+  </div>
+  </div>
+  <div class="ufooter row bg-dark">
+    <div class="col-sm-6">
+      <p class="text-end  text-light fw-bold">Copywrite &copy; 2022 All rights reserved</p>
+    </div>
+    <div class="col-sm-6">
+      <p class=" fw-bold text-light">Designed By: Ankit & Teams.</p>
+    </div>
+  </div>
+</body>
+</html>

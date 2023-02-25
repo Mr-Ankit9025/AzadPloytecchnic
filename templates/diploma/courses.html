@@ -1,0 +1,57 @@
+   {% extends 'base.html' %}
+   {% block content%}
+<style>
+  .pic{
+    margin: 0px auto;
+  }
+</style>
+
+
+ <p class="text-center text-dark fs-1 fw-bold">Course</p>
+ <div class="row">
+    <div class="col-sm-5 mx-auto">
+<div class="input-group">
+  <input type="text" class="form-control">
+  <span class="input-group-text bg-info">
+    <input type="submit" class="btn btn-sm btn-info" value="search">
+  </span>
+</div>
+   </div>
+ </div>
+ <div class="row">
+   <div class="col-sm-1"></div>
+   <div class="col-sm-10">
+     <!-- table start -->
+     
+     {% for x in cdata %}
+     <div class="row mb-5 mt-4">
+       <div class="col-sm-6">
+        <img src="/{{x.cpic}}" class="w-100" />
+
+       </div>
+       <div class="col-sm-6">
+         <div class="row">
+           <div class="col-sm-6">
+            <b>Course :</b> {{ x.cname }} <br/>
+        <b>Branch :</b> {{ x.branch }} <br/>
+        <b>Duration :</b> {{ x.duration }} <br/>
+        <b>Seats :</b> {{ x.seats }} <br/>
+        <b>HOD :</b> {{ x.hod }} <br/>
+        <b>Fee :</b> {{ x.fee }} <br/>
+        <b>Eligibility :</b> {{ x.eligibility }} <br/>
+        <b>Stablish Date :</b> {{ x.sdate }} <br/>
+           </div>
+           <div class="col-sm-6">
+            <img src="/{{ x.hodpic }}" class="img-thumbnail pic" style="max-height: 200px;" />
+          <p class="text-center fs-3 fw-bold">{{ x.hod }}<b class="fs-5">(HOD)</b> </p>
+           </div>
+        </div>
+       </div>
+     </div>
+     {% endfor %}
+     
+   </div>
+   <div class="col-sm-1"></div>
+ </div>
+ 
+   {% endblock%}

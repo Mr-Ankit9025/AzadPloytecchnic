@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <style type="text/css" media="all">
+    .mh{
+    
+      height:500px;
+      margin: 10px 0px;
+
+    }
+    .image{
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+    }
+    .services{
+      border-radius: 12px;
+    }
+    .eng{
+      background-image: url("{% static 'images/img1.jpeg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .shade{
+      background: #6f6f6fdc;
+      background-size: cover;
+    }
+   
+  </style>
+
+   <div class="row container">
+     <!-- start slider -->
+
+  
+
+     <div class="col-sm-12 p-0 m-0 ">
+       
+   
+     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/img1.jpeg' %}" class="d-block w-100 mh" alt="...">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/img2.jpeg' %}" class="d-block w-100 mh" alt="...">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/img3.jpeg' %}" class="d-block w-100 mh" alt="...">
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+       
+       </div>
+     <!-- end slider -->
+   </div>
+  <!-- our management -->
+   
+   <div class="row mt-3">
+      <div class="col-sm-4">
+        <p class="text-center"><img src="{% static 'images/Deem.jpg' %}" class="image" alt="" /></p>
+         <p class="text-center fw-bold fs-4">DEEM
+         <br />
+         <b class="text-center fw-bold fs-5">(Mr. Azad Arimardan)</b></p>
+      </div>
+      <div class="col-sm-4">
+         <p class="text-center"><img src="{% static 'images/dm.jpg' %}" class="image" alt="" />
+          <p class="text-center fw-bold fs-4">MD
+         <br />
+         <b class="text-center fw-bold fs-5">(Mrs. Sangeeta Azad)</b></p>
+         
+        </div>
+      <div class="col-sm-4">
+        <p class="text-center"><img src="{% static 'images/Deem.jpg' %}" class="image" alt="" />
+       <p class="text-center fw-bold fs-4">PRINCIPAL
+         <br />
+         <b class="text-center fw-bold fs-5">(Mr. Ramsoorat Kanaujiya)</b></p>
+        </div>
+      
+    </div>
+    
+    
+    
+  <!-- our services -->
+  <p class="text-center fs-1 mt-3"><b class="text-dark bor">Services</b></p>
+  
+   <div class="services row">
+     <div class="col-sm-4">
+      Hostel  
+     </div>
+     <div class="col-sm-4">
+      Medical
+     </div>
+     <div class="col-sm-4"></div>
+   </div>
+   <div class="row section2">
+     
+   </div>
+{% endblock %}
